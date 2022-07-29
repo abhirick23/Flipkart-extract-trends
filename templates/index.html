@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="{% static '/img/website.jpg' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for your favorite trends</title>
+    <link rel="stylesheet" href="{% static '/css/style1.css' %}">
+    <style>
+        body{
+            background: url("{% static 'img/fashion-background.jpg' %}");
+            background-size: 30%;
+            background-position: -400px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="information">
+            <h2>information Form</h2>
+            <form id="register" action="{% url 'result' %}">
+
+                <label>Category</label><br>
+                <input type="text" name="category" id="name" placeholder="Fahion/Electronics/others" required autocomplete="off"><br><br>
+
+                <label>Type of Products:-</label><br>
+                <input type="text" name="sub-category" id="name" placeholder="Tshirts/jeans/etc." required autocomplete="off"><br><br>
+
+                <label>Product Style:-</label><br>
+                <input type="text" name="sub-category" id="name" placeholder="enter specfic Pattern " required autocomplete="off"><br><br>
+            
+                <label>Gender:</label>
+                <br>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="male">
+                &nbsp;
+                <span id="male">Male</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="female">
+                &nbsp;
+                <span id="female">Female</span>
+                <br><br>
+
+                <label>Select your preferred Social media Platform:</label><br><br>
+                
+                <input type="image" src="{%  static 'instagram.ico' %}" id="instagram">
+                <input type="image" src="{%  static 'twitter.ico' %}" id="twitter">
+                <input type="image" src="{%  static 'facebook.ico' %}" id="facebook">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

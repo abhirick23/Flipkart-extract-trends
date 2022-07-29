@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="{% static '/img/website.jpg' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result based on your Choices </title>
+    <style>
+        body{
+            background-color: #cccc;
+        }
+        table{
+            background-color: lightblue;
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
+        table:hover{
+            background-color: bisque;
+        }
+        .box{
+            background-color: #172337;
+            height: 60px;
+        }
+        .flipkart{
+            color: aquamarine;
+            text-decoration: none;
+            align-items: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table>{{geek|safe}}</table>
+
+    <div class="box">
+        <marquee behavior="" direction="">
+            <p><a href="{% url 'home' %}" class="flipkart">Click on this to search your product on flipkart</a></p>
+        </marquee>
+    </div>
+</body>
+</html>

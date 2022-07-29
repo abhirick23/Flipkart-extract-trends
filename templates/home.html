@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <script src="https://kit.fontawesome.com/7294553469.js" crossorigin="anonymous"></script>
+    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header_top" >
+            <a href="#" class="float-left">
+                <img width="75" src="{% static 'img/flipkart.png' %}" alt="">
+                <div class="a_ep">
+                    <span class="ep explore">Explore</span> <span class="ep plus">Plus</span>
+                    <img width="10" src="{% static 'img/plus.png' %}" alt="">
+                </div>
+            </a>
+            <form action="{% url 'final_product' %}" class="search-form float-left" required>
+                <input type="text" name="search" autocomplete="off" placeholder="Search for products, brands and more">
+                <button type="submit" class="btn" >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <ul class="float-left" style="margin-left: 87px;">
+                <li>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i>  Cart</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header_bottom header_bottom_nav ">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="#">Baby &amp; kids <i class="fa-solid fa-angle-down"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Men <i class="fa-solid fa-angle-down"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Women <i class="fa-solid fa-angle-down"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Electronics <i class="fa-solid fa-angle-down"></i></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-fluid A_cont">
+        <div class="A_main1" >
+            <div id="slider">
+                <img src="{% static 'img/slider1.webp' %}" alt="">
+                <img src="{% static 'img/slider2.webp' %}" alt="">
+                <img src="{% static 'img/slider3.webp' %}" alt="">
+                <img src="{% static 'img/slider1.webp' %}" alt="">
+                <img src="{% static 'img/slider2.webp' %}" alt="">
+            </div>
+            <div class="slide left">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="slide right">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+        <div class="A_main2">
+            <img src="{% static 'img/fashion.png' %}" alt="">
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
